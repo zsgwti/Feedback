@@ -1,0 +1,489 @@
+﻿@{
+    ViewBag.Title = "Index";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dr.coffee 咖博士</title>
+    <link href="~/Content/layui/css/layui.css" rel="stylesheet" />
+    <script src="~/Content/layui/layui.js"></script>
+</head>
+<body>
+
+    <header>
+
+        <div class="layui-header" style="width:100%;height:60px;background-color:black">
+            <div class="layui-row">
+                <div class="layui-col-md3 layui-col-md-offset1">
+                    <a href="http://www.dr-coffee.com/"><img src="~/Img/logo_r.png" alt="咖博士 Dr.coffee" style="width: 300px; margin: 20px 0px 0px 0px; text-align: center;" /></a>
+                </div>
+                <div class="layui-col-md1 layui-col-md-offset6">
+                    <div class="layui-row">
+                        <div class="layui-col-md3">
+                            <a href="/Home/IndexEN"><img src="~/Img/web32.svg" style="margin: 13px 0px 0px 0px" /></a>
+                        </div>
+                        <div class="layui-col-md1">
+                            <div style="margin: 20px 0px 0px 10px; color: white">CN</div>
+                        </div>
+                        <div class="layui-col-md2">
+                            <a href="/Home/Login"><img src="~/Img/user32.svg" style="margin: 13px 0px 0px 30px" /></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+
+    </header>
+    <main>
+        <div class="body" style="align-items:center">
+            <div class="layui-panel" style="margin:50px 20%;width:60%;height:100%;display:block">
+                <div class="title" style="text-align:center;margin:20px 10px 10px 10px;font-size:36px;color:red;font-weight:bolder">客户满意度调查表</div>
+                <div class="body" style="margin:20px 50px">
+                    <h4>
+                        尊敬的伙伴，您好：
+                    </h4>
+                    <h4>
+                        &emsp; &emsp;感谢您选择咖博士产品与服务，我们以“以客户为本”为使命，致力于成为您最值得信赖的商用厨房领域饮料设备的第一品牌及服务伙伴。
+                        <br />
+                        &emsp; &emsp;您的反馈对我们至关重要，在持续优化产品与服务的同时，不断提高您的使用体验，共享共创，携手共同发展。我们将依据调查结果改善工作，以期为您提供更优质的产品与服务，真诚的希望聆听您的声音。
+                    </h4>
+                </div>
+                <div class="layui-panel" style="height: 100%;margin:40px 8% 40px 8%">
+                    <form class="layui-form">
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:white">*</div>
+                                    <h4 class="question">1、公司名称</h4>
+                                </div>
+                                <div class="input-text">
+                                    <input type="text" name="company" placeholder="您的公司名称"  class="layui-input" style="width:85%;margin:0 10% 0 5%" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:red">*</div>
+                                    <h4 class="question">2、姓名</h4>
+                                </div>
+                                <div class="input-text">
+                                    <input type="text" name="name" placeholder="您的姓名" lay-verify="required" class="layui-input" style="width:85%;margin:0 10% 0 5%" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:red">*</div>
+                                    <h4 class="question">3、联系方式</h4>
+                                </div>
+                                <div class="input-text">
+                                    <input type="text" name="contact" placeholder="您的手机号" lay-verify="contact"  class="layui-input" style="width:85%;margin:0 10% 0 5%" autocomplete="off">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:red">*</div>
+                                    <h4 class="question">4、机器型号</h4>
+                                </div>
+                                <div class="input-text">
+                                    <input type="text" name="machine" placeholder="您所购买的机器型号，多项请使用；隔开" lay-verify="required" class="layui-input" style="width:85%;margin:0 10% 0 5%" autocomplete="off">
+
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:red">*</div>
+                                    <h4 class="question">5、产品质量</h4>
+                                </div>
+                                <div class="layui-row" style="display:block;text-align:center">
+                                    <div class="layui-col-md1 layui-col-md-offset6">
+                                        <div class="grid-demo">非常满意<br/>(10分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">比较满意<br />(8分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">一般<br />(6分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">比较不满意<br />(4分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">非常不满意<br />(2分)</div>
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">外观造型及包装</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check1-1" value="5" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-1" value="4" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-1" value="3" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-1" value="2" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-1" value="1" lay-verify="required">
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">产品的功能</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check1-2" value="5" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-2" value="4" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-2" value="3" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-2" value="2" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-2" value="1" lay-verify="required">
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0 ">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">产品的稳定性</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check1-3" value="5" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-3" value="4" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-3" value="3" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-3" value="2" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-3" value="1" lay-verify="required">
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">产品的使用寿命</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check1-4" value="5" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-4" value="4" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-4" value="3" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-4" value="2" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check1-4" value="1" lay-verify="required">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:red">*</div>
+                                    <h4 class="question">6、服务中心</h4>
+                                </div>
+                                <div class="layui-row" style="display:block;text-align:center">
+                                    <div class="layui-col-md1 layui-col-md-offset6">
+                                        <div class="grid-demo">非常满意<br/>(10分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">比较满意<br />(8分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">一般<br />(6分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">比较不满意<br />(4分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">非常不满意<br />(2分)</div>
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">业务人员的态度</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check2-1" value="5">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-1" value="4">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-1" value="3">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-1" value="2">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-1" value="1">
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">咨询服务的专业性</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check2-2" value="5">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-2" value="4">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-2" value="3">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-2" value="2">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-2" value="1">
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0 ">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">设备故障的处理速度</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check2-3" value="5">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-3" value="4">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-3" value="3">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-3" value="2">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-3" value="1">
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">协调沟通的配合度</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check2-4" value="5">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-4" value="4">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-4" value="3">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-4" value="2">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check2-4" value="1">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:red">*</div>
+                                    <h4 class="question">7、交货信誉</h4>
+                                </div>
+                                <div class="layui-row" style="display:block;text-align:center">
+                                    <div class="layui-col-md1 layui-col-md-offset6">
+                                        <div class="grid-demo">非常满意<br/>(10分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">比较满意<br />(8分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">一般<br />(6分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">比较不满意<br />(4分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">非常不满意<br />(2分)</div>
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">交货数量和时间的准确性</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check3-1" value="5" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check3-1" value="4" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check3-1" value="3" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check3-1" value="2" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check3-1" value="1" lay-verify="required">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:red">*</div>
+                                    <h4 class="question">8、外延需求</h4>
+                                </div>
+                                <div class="layui-row" style="display:block;text-align:center">
+                                    <div class="layui-col-md1 layui-col-md-offset6">
+                                        <div class="grid-demo">非常满意<br/>(10分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">比较满意<br />(8分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">一般<br />(6分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">比较不满意<br />(4分)</div>
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <div class="grid-demo">非常不满意<br />(2分)</div>
+                                    </div>
+                                </div>
+                                <div class="layui-row" style="display: block; text-align: center; margin: 8px 0">
+                                    <div class="layui-col-md3">
+                                        <div class="grid-demo">产品的培训和技术支持</div>
+                                    </div>
+                                    <div class="layui-col-md1 layui-col-md-offset3">
+                                        <input type="radio" name="check4-1" value="5" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check4-1" value="4" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check4-1" value="3" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check4-1" value="2" lay-verify="required">
+                                    </div>
+                                    <div class="layui-col-md1">
+                                        <input type="radio" name="check4-1" value="1" lay-verify="required">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;padding:10px;">
+                                <div class="title" style="display:flex;flex-direction:row;margin:10px">
+                                    <div class="check" style="color:white">*</div>
+                                    <h4 class="question">9、建议与反馈</h4>
+                                </div>
+                                <div class="input-text">
+                                    <textarea name="suggestion" placeholder="" class="layui-textarea" style="width:85%;margin:0 10% 0 5%" autocomplete="off"></textarea>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="layui-form-item">
+                            <div class="Q&A" style="display:block;text-align:center">
+                                <button type="button" class="layui-btn" lay-submit lay-filter="infomation" >&emsp;提&emsp;交&emsp;</button>
+                            </div>
+                        </div>
+                    </form>
+                    
+         
+                </div>
+            </div>
+
+        </div>
+
+
+    </main>
+
+    <footer>
+    </footer>
+
+
+    
+
+
+    <script>
+        layui.use(['form'], function () {
+            var form = layui.form;
+            var layer = layui.layer, $ = layui.jquery;
+            
+
+            // 自定义验证规则
+            form.verify({
+                contact: [
+                    /^(13[0-9]|14[01456879]|15[0-35-9]|16[2567]|17[0-8]|18[0-9]|19[0-35-9])\d{8}$/,
+                    '请输入正确的联系方式！'
+                ]
+            });
+
+
+            // 提交事件
+            form.on('submit(infomation)', function (data) {
+                console.log("submit")
+                var field = data.field;
+                $.ajax({
+                    url: '/Home/submit',
+                    type: 'post',
+                    dataType: 'json',
+                    data: field,
+                    success: function (result) {
+                        if (result.result == "success") {
+                            layer.msg('感谢您的提交！', { icon: 1 }, function () {
+                                setTimeout(function () {                                   
+                                    /*window.location.href ="http://www.dr-coffee.com/";*/
+                                    /*window.location.reload();*/
+                                    window.location.href ="/Home/End";
+                                }, 1000)                                
+                            });
+                        } else if (result.result == "none") {
+                            layer.msg('请检查评价表，确认后再提交', { icon: 0 });
+                        } else {
+                            layer.msg('出错了，请联系相关人员！');
+                        }
+                        
+                    }
+                })
+                return false;
+            });
+
+        });
+    </script>
+</body>
+</html>
